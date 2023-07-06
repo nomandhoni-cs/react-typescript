@@ -1,4 +1,6 @@
-
+body{
+  margin: 0rem;
+}
 a {
   font-weight: 500;
   color: #646cff;
