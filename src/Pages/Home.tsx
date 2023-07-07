@@ -1,11 +1,14 @@
-import { Link } from "react-router-dom"
+import { useState } from "react"
+import InputBox from "../components/InputBox"
 
-const Home = () => {
+const Home: React.FC = () => {
+    document.title = "Shortly - Make your link Shorter";
+    const [inputLink, setInputLink] = useState<string>("")
+    console.log(inputLink);
     return (<>
-        <h1>Home</h1>
-        <button>
-            <Link to="about">About</Link>
-        </button>
+        <div className="mx-auto max-w-screen-xl">
+            <InputBox inputLink={inputLink} setInputLink={setInputLink} />
+        </div>
     </>
     )
 }

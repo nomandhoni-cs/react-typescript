@@ -7,12 +7,14 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import About from './Pages/About.tsx';
-import SharedLayout from './Pages/SharedLayout.tsx';
-
+import App from './App.tsx';
+import { ThemeProvider } from "@material-tailwind/react";
+import NotFound from './Pages/NotFound.tsx';
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <SharedLayout />,
+    element: <App />,
+    errorElement: <NotFound />,
     children: [
       {
         path: "/",
@@ -28,6 +30,8 @@ const router = createBrowserRouter([
 ]);
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <ThemeProvider>
+      <RouterProvider router={router} />
+    </ThemeProvider>
   </React.StrictMode>,
 )

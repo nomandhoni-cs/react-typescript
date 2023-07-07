@@ -1,12 +1,12 @@
-import { Link } from "react-router-dom"
 
-const About = () => {
+import { Typography } from "@material-tailwind/react";
+const About: React.FC = () => {
+  document.title = "About | Shortly";
   return (
     <>
-    <h1>About</h1>
-    <button>
-    <Link to="/">Go Back</Link>
-    </button>
+      <Typography variant="h2" color="blue-gray">
+        About
+      </Typography>
     </>
   )
 }

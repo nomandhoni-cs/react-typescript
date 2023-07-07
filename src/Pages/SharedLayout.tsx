@@ -4,8 +4,7 @@ import Header from '../components/Header'
 const SharedLayout = () => {
   return (
     <>
-    <Header />
-    <Outlet />
+
     </>
   )
 }
